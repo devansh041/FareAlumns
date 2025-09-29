@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - AlumniConnect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+  
+  <!-- Registration Form -->
+  <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" data-id="register-container">
+    <div class="max-w-2xl w-full space-y-8">
+      <div class="text-center" data-id="register-header">
+        <div class="mx-auto w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+          <i data-lucide="user-plus" class="w-8 h-8 text-white"></i>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-900" data-id="register-title">Join AlumniConnect</h2>
+        <p class="mt-2 text-sm text-gray-600" data-id="register-subtitle">
+          Create your account and connect with your alumni network
+        </p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-md p-8" data-id="register-form-container">
+        <form class="space-y-6" data-id="register-form">
+          <!-- Personal Information -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2" data-id="first-name-label">
+                First Name *
+              </label>
+              <input id="firstName" name="firstName" type="text" required 
+                     class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                     placeholder="John" data-id="first-name-input">
+            </div>
+            
+            <div>
+              <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2" data-id="last-name-label">
+                Last Name *
+              </label>
+              <input id="lastName" name="lastName" type="text" required 
+                     class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                     placeholder="Doe" data-id="last-name-input">
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2" data-id="email-label">
+              Email Address *
+            </label>
+            <div class="relative">
+              <input id="email" name="email" type="email" autocomplete="email" required 
+                     class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                     placeholder="john.doe@email.com" data-id="email-input">
+              <i data-lucide="mail" class="w-5 h-5 text-gray-400 absolute left-3 top-2.5"></i>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="password" class="block text-sm font-medium text-gray-700 mb-2" data-id="password-label">
+                Password *
+              </label>
+              <div class="relative">
+                <input id="password" name="password" type="password" required 
+                       class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       placeholder="Create a strong password" data-id="password-input">
+                <i data-lucide="lock" class="w-5 h-5 text-gray-400 absolute left-3 top-2.5"></i>
+                <button type="button" class="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600" data-id="toggle-password">
+                  <i data-lucide="eye" class="w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div>
+              <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2" data-id="confirm-password-label">
+                Confirm Password *
+              </label>
+              <div class="relative">
+                <input id="confirmPassword" name="confirmPassword" type="password" required 
+                       class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       placeholder="Confirm your password" data-id="confirm-password-input">
+                <i data-lucide="lock" class="w-5 h-5 text-gray-400 absolute left-3 top-2.5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Information -->
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-lg font-medium text-gray-900 mb-4" data-id="academic-info-title">Academic Information</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="graduationYear" class="block text-sm font-medium text-gray-700 mb-2" data-id="graduation-year-label">
+                  Graduation Year *
+                </label>
+                <select id="graduationYear" name="graduationYear" required 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                        data-id="graduation-year-select">
+                  <option value="">Select Year</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="degree" class="block text-sm font-medium text-gray-700 mb-2" data-id="degree-label">
+                  Degree *
+                </label>
+                <select id="degree" name="degree" required 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                        data-id="degree-select">
+                  <option value="">Select Degree</option>
+                  <option value="bachelor">Bachelor's Degree</option>
+                  <option value="master">Master's Degree</option>
+                  <option value="phd">Ph.D.</option>
+                  <option value="certificate">Certificate</option>
+                  <option value="diploma">Diploma</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <label for="major" class="block text-sm font-medium text-gray-700 mb-2" data-id="major-label">
+                Major/Field of Study *
+              </label>
+              <select id="major" name="major" required 
+                      class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                      data-id="major-select">
+                <option value="">Select Major</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="business">Business Administration</option>
+                <option value="engineering">Engineering</option>
+                <option value="medicine">Medicine</option>
+                <option value="law">Law</option>
+                <option value="arts">Arts & Humanities</option>
+                <option value="psychology">Psychology</option>
+                <option value="economics">Economics</option>
+                <option value="biology">Biology</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Professional Information -->
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-lg font-medium text-gray-900 mb-4" data-id="professional-info-title">Professional Information</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="currentTitle" class="block text-sm font-medium text-gray-700 mb-2" data-id="current-title-label">
+                  Current Job Title
+                </label>
+                <input id="currentTitle" name="currentTitle" type="text" 
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       placeholder="Software Engineer" data-id="current-title-input">
+              </div>
+              
+              <div>
+                <label for="currentCompany" class="block text-sm font-medium text-gray-700 mb-2" data-id="current-company-label">
+                  Current Company
+                </label>
+                <input id="currentCompany" name="currentCompany" type="text" 
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                       placeholder="Tech Company Inc." data-id="current-company-input">
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <label for="location" class="block text-sm font-medium text-gray-700 mb-2" data-id="location-label">
+                Current Location
+              </label>
+              <input id="location" name="location" type="text" 
+                     class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                     placeholder="San Francisco, CA" data-id="location-input">
+            </div>
+          </div>
+
+          <!-- Interests and Participation -->
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-lg font-medium text-gray-900 mb-4" data-id="interests-title">Interests & Participation</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2" data-id="interests-label">
+                  I'm interested in: (Select all that apply)
+                </label>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <label class="flex items-center">
+                    <input type="checkbox" name="interests" value="mentoring" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" data-id="interest-mentoring">
+                    <span class="ml-2 text-sm text-gray-700">Mentoring</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="interests" value="networking" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" data-id="interest-networking">
+                    <span class="ml-2 text-sm text-gray-700">Networking</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="interests" value="events" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" data-id="interest-events">
+                    <span class="ml-2 text-sm text-gray-700">Events</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="interests" value="donations" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" data-id="interest-donations">
+                    <span class="ml-2 text-sm text-gray-700">Donations</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="interests" value="volunteering" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" data-id="interest-volunteering">
+                    <span class="ml-2 text-sm text-gray-700">Volunteering</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="interests" value="recruiting" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" data-id="interest-recruiting">
+                    <span class="ml-2 text-sm text-gray-700">Recruiting</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms and Privacy -->
+          <div class="border-t border-gray-200 pt-6">
+            <div class="space-y-4">
+              <label class="flex items-start">
+                <input type="checkbox" required class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1" data-id="terms-checkbox">
+                <span class="ml-2 text-sm text-gray-700" data-id="terms-text">
+                  I agree to the <a href="terms.html" class="text-blue-600 hover:text-blue-500">Terms of Service</a> and 
+                  <a href="privacy.html" class="text-blue-600 hover:text-blue-500">Privacy Policy</a>
+                </span>
+              </label>
+              
+              <label class="flex items-start">
+                <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1" data-id="newsletter-checkbox">
+                <span class="ml-2 text-sm text-gray-700" data-id="newsletter-text">
+                  I would like to receive updates about alumni events and opportunities
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" 
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors" 
+                    data-id="register-submit">
+              <i data-lucide="user-plus" class="w-5 h-5 mr-2"></i>
+              Create Account
+            </button>
+          </div>
+        </form>
+        
+        <div class="mt-6 text-center">
+          <p class="text-sm text-gray-600" data-id="login-prompt">
+            Already have an account?
+            <a href="login.html" class="font-medium text-blue-600 hover:text-blue-500" data-id="login-link">
+              Sign in here
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    loadComponent('#navbar-container');
+    loadComponent('#badge-container');
+    
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+
+    // Registration form functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const registerForm = document.querySelector('[data-id="register-form"]');
+      const togglePasswordBtn = document.querySelector('[data-id="toggle-password"]');
+      const passwordInput = document.querySelector('[data-id="password-input"]');
+      const confirmPasswordInput = document.querySelector('[data-id="confirm-password-input"]');
+
+      // Toggle password visibility
+      togglePasswordBtn?.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        
+        const icon = this.querySelector('i');
+        icon.setAttribute('data-lucide', type === 'password' ? 'eye' : 'eye-off');
+        lucide.createIcons();
+      });
+
+      // Password confirmation validation
+      confirmPasswordInput?.addEventListener('blur', function() {
+        const password = passwordInput.value;
+        const confirmPassword = this.value;
+        
+        if (password !== confirmPassword) {
+          this.setCustomValidity('Passwords do not match');
+          this.classList.add('border-red-500');
+        } else {
+          this.setCustomValidity('');
+          this.classList.remove('border-red-500');
+        }
+      });
+
+      // Handle form submission
+      registerForm?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const userData = Object.fromEntries(formData.entries());
+        
+        // Get selected interests
+        const interests = [];
+        document.querySelectorAll('input[name="interests"]:checked').forEach(checkbox => {
+          interests.push(checkbox.value);
+        });
+        userData.interests = interests;
+        
+        // Here you would implement actual user registration
+        console.log('Registration data:', userData);
+        
+        // For demo purposes, show success message and redirect
+        alert('Registration successful! Welcome to AlumniConnect.');
+        window.location.href = 'dashboard.html';
+      });
+    });
+  </script>
+</body>
+</html>
