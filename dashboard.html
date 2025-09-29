@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - AlumniConnect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50 min-h-screen">
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+  
+  <!-- Dashboard Header -->
+  <div class="bg-white border-b border-gray-200" data-id="dashboard-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900" data-id="dashboard-title">Dashboard</h1>
+          <p class="text-gray-600 mt-1" data-id="dashboard-subtitle">Welcome back! Here's what's happening in your alumni network.</p>
+        </div>
+        <div class="flex space-x-3 mt-4 md:mt-0">
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" data-id="add-alumni-btn">
+            <i data-lucide="user-plus" class="w-4 h-4 inline mr-2"></i>
+            Add Alumni
+          </button>
+          <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors" data-id="create-event-btn">
+            <i data-lucide="calendar-plus" class="w-4 h-4 inline mr-2"></i>
+            Create Event
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-id="stat-total-alumni">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm text-gray-600">Total Alumni</p>
+            <p class="text-2xl font-bold text-gray-900">2,847</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-id="stat-active-mentors">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-green-600"></i>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm text-gray-600">Active Mentors</p>
+            <p class="text-2xl font-bold text-gray-900">342</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-id="stat-upcoming-events">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="calendar" class="w-6 h-6 text-purple-600"></i>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm text-gray-600">Upcoming Events</p>
+            <p class="text-2xl font-bold text-gray-900">12</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-id="stat-donations">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="heart" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div class="ml-4">
+            <p class="text-sm text-gray-600">This Month</p>
+            <p class="text-2xl font-bold text-gray-900">$24,680</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Recent Activity -->
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-id="recent-activity-card">
+          <div class="p-6 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900" data-id="recent-activity-title">Recent Activity</h2>
+          </div>
+          <div class="p-6">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3" data-id="activity-1">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i data-lucide="user-plus" class="w-5 h-5 text-blue-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">Sarah Johnson joined the network</p>
+                  <p class="text-xs text-gray-500">Class of 2018 • Computer Science</p>
+                </div>
+                <span class="text-xs text-gray-500">2h ago</span>
+              </div>
+              
+              <div class="flex items-center space-x-3" data-id="activity-2">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <i data-lucide="calendar" class="w-5 h-5 text-green-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">Tech Alumni Reunion scheduled</p>
+                  <p class="text-xs text-gray-500">March 15, 2024 • Virtual Event</p>
+                </div>
+                <span class="text-xs text-gray-500">4h ago</span>
+              </div>
+              
+              <div class="flex items-center space-x-3" data-id="activity-3">
+                <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                  <i data-lucide="heart" class="w-5 h-5 text-orange-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">Michael Chen made a donation</p>
+                  <p class="text-xs text-gray-500">$500 • Scholarship Fund</p>
+                </div>
+                <span class="text-xs text-gray-500">6h ago</span>
+              </div>
+              
+              <div class="flex items-center space-x-3" data-id="activity-4">
+                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                  <i data-lucide="graduation-cap" class="w-5 h-5 text-purple-600"></i>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">New mentorship match created</p>
+                  <p class="text-xs text-gray-500">Emily Davis ↔ Current Student</p>
+                </div>
+                <span class="text-xs text-gray-500">1d ago</span>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="#" class="text-blue-600 hover:text-blue-700 text-sm font-medium" data-id="view-all-activity">View all activity</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions & Upcoming Events -->
+      <div class="space-y-8">
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-id="quick-actions-card">
+          <div class="p-6 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900" data-id="quick-actions-title">Quick Actions</h2>
+          </div>
+          <div class="p-6">
+            <div class="space-y-3">
+              <a href="alumni.html" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors" data-id="quick-action-view-alumni">
+                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                  <i data-lucide="users" class="w-4 h-4 text-blue-600"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-900">View Alumni Directory</span>
+              </a>
+              
+              <a href="events.html" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors" data-id="quick-action-manage-events">
+                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                  <i data-lucide="calendar" class="w-4 h-4 text-green-600"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-900">Manage Events</span>
+              </a>
+              
+              <a href="mentorship.html" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors" data-id="quick-action-mentorship">
+                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                  <i data-lucide="graduation-cap" class="w-4 h-4 text-purple-600"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-900">Mentorship Program</span>
+              </a>
+              
+              <a href="donations.html" class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors" data-id="quick-action-donations">
+                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+                  <i data-lucide="heart" class="w-4 h-4 text-orange-600"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-900">Track Donations</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-id="upcoming-events-card">
+          <div class="p-6 border-b border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-900" data-id="upcoming-events-title">Upcoming Events</h2>
+          </div>
+          <div class="p-6">
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-600 pl-4" data-id="event-1">
+                <h3 class="text-sm font-medium text-gray-900">Annual Reunion</h3>
+                <p class="text-xs text-gray-500">March 15, 2024</p>
+                <p class="text-xs text-blue-600">142 registered</p>
+              </div>
+              
+              <div class="border-l-4 border-green-600 pl-4" data-id="event-2">
+                <h3 class="text-sm font-medium text-gray-900">Career Networking</h3>
+                <p class="text-xs text-gray-500">March 22, 2024</p>
+                <p class="text-xs text-green-600">89 registered</p>
+              </div>
+              
+              <div class="border-l-4 border-purple-600 pl-4" data-id="event-3">
+                <h3 class="text-sm font-medium text-gray-900">Mentorship Mixer</h3>
+                <p class="text-xs text-gray-500">April 5, 2024</p>
+                <p class="text-xs text-purple-600">56 registered</p>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="events.html" class="text-blue-600 hover:text-blue-700 text-sm font-medium" data-id="view-all-events">View all events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-container" data-source="components/footer.html"></div>
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+</body>
+</html>

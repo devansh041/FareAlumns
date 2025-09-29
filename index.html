@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlumniConnect - Centralized Alumni Management Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sofia bg-gray-50 min-h-screen">
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20" data-id="hero-section">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6" data-id="hero-title">
+          Welcome to AlumniConnect
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100" data-id="hero-subtitle">
+          Your centralized platform for alumni management, networking, and growth
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="login.html" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors" data-id="login-cta">
+            <i data-lucide="log-in" class="w-5 h-5 inline mr-2"></i>
+            Alumni Login
+          </a>
+          <a href="register.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors" data-id="register-cta">
+            <i data-lucide="user-plus" class="w-5 h-5 inline mr-2"></i>
+            Join Network
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white" data-id="features-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-id="features-title">
+          Comprehensive Alumni Management
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-id="features-subtitle">
+          Everything you need to maintain strong connections with your alumni network
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl" data-id="feature-profiles">
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="users" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Alumni Profiles</h3>
+          <p class="text-gray-600">Comprehensive profiles with career progression, achievements, and contact information</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl" data-id="feature-networking">
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="network" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Networking Hub</h3>
+          <p class="text-gray-600">Connect alumni with current students and facilitate professional networking</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl" data-id="feature-events">
+          <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="calendar" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Event Management</h3>
+          <p class="text-gray-600">Organize reunions, webinars, and networking events with integrated RSVP system</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl" data-id="feature-mentorship">
+          <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Mentorship Program</h3>
+          <p class="text-gray-600">Match experienced alumni with current students for career guidance</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl" data-id="feature-donations">
+          <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="heart" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Donation Tracking</h3>
+          <p class="text-gray-600">Secure donation management with transparent tracking and acknowledgments</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl" data-id="feature-analytics">
+          <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="bar-chart" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics & Reports</h3>
+          <p class="text-gray-600">Comprehensive analytics on alumni engagement and platform usage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience Section -->
+  <section class="py-16 bg-gray-100" data-id="audience-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-id="audience-title">
+          Built for Everyone in Your Community
+        </h2>
+        <p class="text-lg text-gray-600" data-id="audience-subtitle">
+          Connecting all stakeholders in the educational ecosystem
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm" data-id="audience-alumni">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="user-check" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Alumni</h3>
+          <p class="text-sm text-gray-600">Stay connected, share achievements, and give back to the community</p>
+        </div>
+
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm" data-id="audience-students">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Current Students</h3>
+          <p class="text-sm text-gray-600">Access mentorship opportunities and career guidance from alumni</p>
+        </div>
+
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm" data-id="audience-faculty">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Faculty & Administrators</h3>
+          <p class="text-sm text-gray-600">Manage alumni relationships and track institutional impact</p>
+        </div>
+
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm" data-id="audience-employers">
+          <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Employers & Recruiters</h3>
+          <p class="text-sm text-gray-600">Connect with talented alumni and current students for opportunities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-900 text-white" data-id="cta-section">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4" data-id="cta-title">
+        Ready to Strengthen Your Alumni Network?
+      </h2>
+      <p class="text-xl mb-8 text-blue-100" data-id="cta-description">
+        Join thousands of institutions already using AlumniConnect to build stronger communities
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="demo.html" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors" data-id="demo-cta">
+          <i data-lucide="play-circle" class="w-5 h-5 inline mr-2"></i>
+          View Demo
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors" data-id="contact-cta">
+          <i data-lucide="phone" class="w-5 h-5 inline mr-2"></i>
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container" data-source="components/footer.html"></div>
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+  </script>
+</body>
+</html>
